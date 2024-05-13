@@ -158,6 +158,7 @@ endmodule
 
 
 **RESULT:**
+
 Hence ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR are simulated and synthesised using Xilinx ISE.
 
 
