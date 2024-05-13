@@ -1,13 +1,16 @@
-# SIMULATION AND IMPLEMENTATION OF  COMBINATIONAL LOGIC CIRCUITS
+**SIMULATION AND IMPLEMENTATION OF  COMBINATIONAL LOGIC CIRCUITS**
 
-## AIM: 
+**AIM:**
+
  To simulate and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using Xilinx ISE.
 
-## APPARATUS REQUIRED:
+**APPARATUS REQUIRED:**
+
 Xilinx 14.7
 Spartan6 FPGA
 
-## PROCEDURE:
+**PROCEDURE:**
+
 STEP:1  Start  the Xilinx navigator, Select and Name the New project.
 STEP:2  Select the device family, device, package and speed.       
 STEP:3  Select new source in the New Project and select Verilog Module as the Source type.                       
@@ -20,12 +23,14 @@ STEP:9  In the Design Object List Window, enter the pin location for each pin in
 STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here.
 STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 
-##  ENCODER:
+**ENCODER:**
 
-### LOGIC DIAGRAM:
+**LOGIC DIAGRAM:**
+
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
 
-### VERILOG CODE:
+**VERILOG CODE:**
+
 ```
 module encoder(d,a,b,c);
 input [7:0]d;
@@ -36,15 +41,17 @@ or(c,d[1],d[3],d[5],d[7]);
 endmodule
 ```
 
-### OUTPUT WAVEFORM:
+**OUTPUT:**
 ![image](https://github.com/DSVishal0407/VLSI-LAB-EXP-2/assets/163637297/c18ca185-b883-4d1e-a44c-689c903176a4)
 
-## DECODER:
+**DECODER:**
 
-### LOGIC DIAGRAM:
+**LOGIC DIAGRAM:**
+
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
 
-### Verilog Code:
+**Verilog Code:**
+
 ```
 module decoder_8(a,b,c,y);
 input a,b,c; 
@@ -60,15 +67,17 @@ and g8(y[7], (a), (b), (c));
 endmodule
 ```
 
-### OUTPUT WAVEFORM:
+**OUTPUT:**
 ![image](https://github.com/DSVishal0407/VLSI-LAB-EXP-2/assets/163637297/90488a6d-68dc-43f6-8893-524ca553df20)
 
-## MULTIPLEXER:
+**MULTIPLEXER:**
 
-### LOGIC DIAGRAM:
+**LOGIC DIAGRAM:**
+
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/427f75b2-8e67-44b9-ac45-a66651787436)
 
-### VERILOG CODE:
+**VERILOG CODE:**
+
 ```
 module mux(a,b,c,d,s0,s1,y);
 input a,b,c,d,s0,s1;
@@ -77,15 +86,18 @@ assign y=s1 ?(s0?d:c):(s0?b:a);
 endmodule
 ```
 
-### OUTPUT WAVEFORM:
+**OUTPUT:**
+
 ![image](https://github.com/DSVishal0407/VLSI-LAB-EXP-2/assets/163637297/dd9ca970-ceb8-4c63-ab37-0d491f4f389c)
 
-## DEMULTIPLEXER:
+**DEMULTIPLEXER:**
 
-### LOGIC DIAGRAM:
+**LOGIC DIAGRAM:**
+
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/1c45a7fc-08ac-4f76-87f2-c084e7150557)
 
-### VERILOG CODE:
+**VERILOG CODE:**
+
 ```
 module demux(in,s0,s1,s2,d0,d1,d2,d3,d4,d5,d6,d7);
 input in,s0,s1,s2;
@@ -101,15 +113,18 @@ d7=(in & s2 & s1 &s0);
 endmodule
 ```
 
-### OUTPUT WAVEFORM:
+**OUTPUT:**
+
 ![image](https://github.com/DSVishal0407/VLSI-LAB-EXP-2/assets/163637297/8af5aba5-c936-4264-b26d-99cd62a35550)
 
-## MAGNITUDE COMPARATOR:
+**MAGNITUDE COMPARATOR:**
 
-### LOGIC DIAGRAM:
+**LOGIC DIAGRAM:**
+
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
 
-### VERILOG CODE:
+**VERILOG CODE:**
+
 ```
 module magcomp(a,b,l,g,e);
 input [3:0]a,b;
@@ -138,11 +153,11 @@ end
 endmodule
 ```
 
-### OUTPUT WAVEFORM:
+**OUTPUT:**
 ![image](https://github.com/DSVishal0407/VLSI-LAB-EXP-2/assets/163637297/c0e4b293-2420-4b4c-baee-2f098974368e)
 
 
-## RESULT:
+**RESULT:**
 Hence ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR are simulated and synthesised using Xilinx ISE.
 
 
